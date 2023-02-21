@@ -2,10 +2,10 @@
 
 <ul>
     <% for post in @posts %>
-        <li>∆
+        <li>
             <%= post["title"] %>
-            <%= post["long_description"] %>
-            <%= post["date"] %>
+            <%= post["description"] %>
+            <%= post["posted_on"] %>
         </li>
     <% end %>
 </ul>
@@ -14,4 +14,4 @@
     <a href="/places"> Back to all places </a>
 </p>
 
-<a href="/posts/new?place_id= <%= @place["id"] %>">New Post<%= @place["name"]%> </a>
+<a href="/posts/new?place_id= <%= @place["id"] %>">New Post for <%= @place["name"]%> </a>
