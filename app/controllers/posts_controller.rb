@@ -10,9 +10,9 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.new
-    @post["author"] = params["post"]["author"]
-    @post["body"] = params["post"]["body"]
-    @post["image"] = params["post"]["image"]
+    @post["title"] = params["post"]["title"]
+    @post["long_description"] = params["post"]["long_description"]
+    @post["date"] = params["post"]["date"]
     @post.save
     redirect_to "/posts"
   end 
